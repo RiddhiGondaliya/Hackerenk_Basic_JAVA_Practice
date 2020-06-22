@@ -18,7 +18,7 @@ public class Solution {
 
             total_cost = (meal_cost + tip + tex);
 
-            int result =(int)total_cost;
+            int result = (int)Math.round(total_cost);
 
             System.out.println(result);
 
