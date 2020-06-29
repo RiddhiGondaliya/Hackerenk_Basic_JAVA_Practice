@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+
+        Scanner sc = new Scanner(System.in);
+        int time = sc.nextInt();
+        sc.nextLine();
+
+        while(time>0)
+        {
+            String str = sc.nextLine();
+            StringBuilder evenstr = new StringBuilder(); 
+            StringBuilder oddstr = new StringBuilder(); 
+
+            char arr[] = str.toCharArray();
+
+            for(int x = 0; x <str.length();x++){
+
+                if(x%2==0){
+
+                    evenstr.append(arr[x]);
+                }
+                else{
+                    oddstr.append(arr[x]);
+                }
+            }
+            evenstr.append(" ");
+            evenstr.append(oddstr);
+            System.out.println(evenstr);
+            time--;
+        }
+    }
+}
